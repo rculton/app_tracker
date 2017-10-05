@@ -8,7 +8,7 @@ const
         version: {type: String},
         author: {type: String},
         price: {type: Number, default: 0},
-        descriptionL: {type: String}
+        description: {type: String}
     }, {timestamps: true})
 
 //Export the model
