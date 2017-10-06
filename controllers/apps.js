@@ -25,7 +25,7 @@ module.exports = {
 
     //functionality untested, no router
     update: (req, res) => {
-        App.findByIdAndUpdate(req.params.id, req.body, (err, app) =>{
+        App.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, app) =>{
             if (err) return console.log(err)
             res.json(app)
         })
