@@ -23,12 +23,20 @@ module.exports = {
         })
     },
 
+    //functionality untested, no router
     update: (req, res) => {
+        App.findByIdAndUpdate(req.params.id, req.body, (err, app) =>{
+            if (err) return console.log(err)
+            res.json(app)
+        })
 
     },
-
+    //functionality untested, no router
     destroy: (req, res) => {
-        
+        App.findByIdAndRemove(req.params.id, (err, app) =>{
+            if (err) return console.log(err)
+            res.json({success: true, message: "Your app has been TERMINATED 🤖"})
+        })
     },
 
 }
