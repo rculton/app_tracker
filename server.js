@@ -21,5 +21,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, (err) => {
-  console.log(err || `Server listening on port ${'port'}`)
+  console.log(err || `Server listening on port ${port}`)
 })
